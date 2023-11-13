@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SplashScreen"
+    android:background="@drawable/background">
+
+
+    <ImageView
+        android:id="@+id/imgSplashScreen"
+        android:layout_width="266dp"
+        android:layout_height="303dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.392"
+        app:srcCompat="@drawable/splashscreen_icon" />
+
+    <TextView
+        android:id="@+id/tvWElcome"
+        style="@style/text_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="WELCOME TO E-KASTI"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgSplashScreen"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/imgSplashScreen"
+        app:layout_constraintTop_toBottomOf="@+id/imgSplashScreen" />
+
+    <ImageView
+        android:id="@+id/logoBinar"
+        android:layout_width="44dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/binar_logo" />
+
+    <ImageView
+        android:id="@+id/logoStikom"
+        android:layout_width="39dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/logoBinar"
+        app:layout_constraintStart_toEndOf="@+id/logoBinar"
+        app:layout_constraintTop_toTopOf="@+id/logoBinar"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/stikom_logo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

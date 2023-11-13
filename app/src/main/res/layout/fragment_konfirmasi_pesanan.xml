@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    tools:context=".ui.KonfirmasiPesananFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/icon_arrow_back_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/konfirmasiPesananHeader"
+            app:layout_constraintBottom_toBottomOf="@id/konfirmasiPesananHeader"
+            android:backgroundTint="@color/white" />
+
+        <TextView
+            android:id="@+id/konfirmasiPesananHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Konfrimasi Pesanan"
+            style="@style/text_header"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            />
+
+        <View
+            android:id="@+id/separatorLineKonfirmasiPesanan"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/konfirmasiPesananHeader"
+            layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/metodePengirimanHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metode Pengiriman"
+            style="@style/text_header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/separatorLineKonfirmasiPesanan"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            />
+
+        <RadioGroup
+            android:id="@+id/radioGroupMetodePengiriman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/metodePengirimanHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center_horizontal"
+
+            >
+
+            <RadioButton
+                android:id="@+id/radioButtonAmbilSendiri"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="Ambil Sendiri"
+                android:button="@null"
+                android:background="@drawable/custom_radio_button"
+                android:gravity="center_horizontal|center_vertical"
+
+                android:textColor="@drawable/radio_button_text_selector" />
+
+            <RadioButton
+                android:id="@+id/radioButtonDikirim"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="Dikirim"
+                android:button="@null"
+                android:background="@drawable/custom_radio_button"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@drawable/radio_button_text_selector"/>
+
+            <!-- Add more ToggleButtons as needed -->
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/horizontalLineDividerPengiriman"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="?android:attr/dividerHorizontal"
+
+            app:layout_constraintTop_toBottomOf="@id/radioGroupMetodePengiriman"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvKonfirmasiCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/horizontalLineDividerPengiriman"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="30dp"
+
+            />
+
+        <View
+            android:id="@+id/horizontalLineDividerCart"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="?android:attr/dividerHorizontal"
+            app:layout_constraintTop_toBottomOf="@id/rvKonfirmasiCart"
+            app:layout_constraintBottom_toTopOf="@id/radioGroupMetodePembayaran"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupMetodePembayaran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/horizontalLineDividerCart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center_horizontal"
+
+            >
+
+            <RadioButton
+                android:id="@+id/radioButtonTunai"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="Tunai"
+                android:button="@null"
+                android:background="@drawable/custom_radio_button"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@drawable/radio_button_text_selector" />
+
+            <RadioButton
+                android:id="@+id/radioButtonDompetDigital"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="Dompet Digital"
+                android:button="@null"
+                android:background="@drawable/custom_radio_button"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@drawable/radio_button_text_selector"/>
+
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/horizontalLineDividerPembayaran"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="?android:attr/dividerHorizontal"
+
+            app:layout_constraintTop_toBottomOf="@id/radioGroupMetodePembayaran"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/ringkasanHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ringkasan Pembayaran"
+            style="@style/text_header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalLineDividerPembayaran"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            />
+
+
+            <View
+                android:id="@+id/layoutRingkasan"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/border"
+                app:layout_constraintBottom_toTopOf="@id/btnPesan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ringkasanHeader"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+            android:id="@+id/tvHeaderTotalPembayaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Total Pembayaran"
+            app:layout_constraintTop_toTopOf="@id/layoutRingkasan"
+            app:layout_constraintStart_toStartOf="@id/layoutRingkasan"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/tvTotalBayar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Rp. 56.000"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/tvHeaderTotalPembayaran"
+            app:layout_constraintBottom_toBottomOf="@id/tvHeaderTotalPembayaran"
+            app:layout_constraintEnd_toEndOf="@id/layoutRingkasan"
+            android:layout_marginEnd="20dp"/>
+
+        <Button
+            android:id="@+id/btnPesan"
+            style="@style/Widget.MaterialComponents.Button"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pesan"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="20dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

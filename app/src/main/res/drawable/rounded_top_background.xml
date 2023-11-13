@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="8dp"> <!-- Atur jarak sudut atas yang ingin Anda bulatkan -->
+        <shape
+            android:shape="rectangle">
+            <solid android:color="@color/grey" /> <!-- Ganti dengan warna latar belakang Anda -->
+            <corners
+                android:topLeftRadius="16dp"
+                android:topRightRadius="16dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp" /> <!-- Atur sudut bawah kanan (opsional) -->
+        </shape>
+    </item>
+</layer-list>

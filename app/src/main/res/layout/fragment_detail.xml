@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.DetailFragment"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/spagheti"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/namaMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Nama Menu"
+            app:layout_constraintTop_toBottomOf="@id/imgPreview"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/hargaMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Rp. 18.000"
+            app:layout_constraintTop_toTopOf="@id/namaMenu"
+            app:layout_constraintBottom_toBottomOf="@id/namaMenu"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp"
+            />
+
+        <TextView
+            android:id="@+id/deskripsiMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="Deskripsi Menu"
+            app:layout_constraintEnd_toEndOf="@id/hargaMenu"
+            app:layout_constraintStart_toStartOf="@id/namaMenu"
+            app:layout_constraintTop_toBottomOf="@id/namaMenu" />
+
+        <View
+            android:id="@+id/horizontalLine1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toTopOf="@id/viewMaps"
+            app:layout_constraintStart_toStartOf="@id/viewMaps"
+            app:layout_constraintEnd_toEndOf="@id/viewMaps"/>
+
+        <View
+            android:id="@+id/horizontalLine2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@id/viewMaps"
+            app:layout_constraintStart_toStartOf="@id/viewMaps"
+            app:layout_constraintEnd_toEndOf="@id/viewMaps"/>
+
+
+        <View
+            android:id="@+id/viewMaps"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toTopOf="@id/tvItemCount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deskripsiMenu"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/iconLokasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/viewMaps"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/restaurant" />
+
+        <TextView
+            android:id="@+id/titleLokasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Lokasi"
+            app:layout_constraintTop_toTopOf="@id/iconLokasi"
+            app:layout_constraintStart_toEndOf="@id/iconLokasi"
+            app:layout_constraintBottom_toBottomOf="@id/iconLokasi"
+            android:layout_marginStart="15dp"
+            />
+
+        <TextView
+            android:id="@+id/deskripsiLokasi"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/deskripsi_lokasi"
+            app:layout_constraintTop_toBottomOf="@id/titleLokasi"
+            app:layout_constraintStart_toStartOf="@id/titleLokasi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/viewMaps"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:lineSpacingMultiplier="1.2"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTambahKeranjang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button"
+            android:text="@string/tambah_keranjang"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="25dp"
+            android:backgroundTint="@color/colorAccent"
+            />
+
+        <TextView
+            android:id="@+id/tvItemCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+
+            app:layout_constraintBottom_toTopOf="@id/btnTambahKeranjang"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="30dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/btnPlus"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="+"
+            app:layout_constraintTop_toTopOf="@id/tvItemCount"
+            app:layout_constraintBottom_toBottomOf="@id/tvItemCount"
+            app:layout_constraintStart_toEndOf="@id/tvItemCount"
+            android:layout_marginStart="20dp"
+            android:backgroundTint="@color/colorAccent"
+            />
+
+        <Button
+            android:id="@+id/btnMin"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:text="-"
+            app:layout_constraintTop_toTopOf="@id/tvItemCount"
+            app:layout_constraintBottom_toBottomOf="@id/tvItemCount"
+            app:layout_constraintEnd_toStartOf="@id/tvItemCount"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/colorAccent"
+            />
+
+        <ImageButton
+            android:id="@+id/btnArrowBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/icon_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@android:color/transparent"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.RiwayatBelanjaFragment">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/icon_arrow_back_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/RiwayatHeader"
+        app:layout_constraintBottom_toBottomOf="@id/RiwayatHeader"
+        android:backgroundTint="@color/white" />
+
+    <TextView
+        android:id="@+id/RiwayatHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Riwayat Belanja"
+        style="@style/text_header"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        />
+
+    <View
+        android:id="@+id/horizontalLineRiwayatHeader"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/RiwayatHeader"
+        layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"/>
+
+    <ImageButton
+        android:id="@+id/btnDeleteRiwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/delete_icon"
+        app:layout_constraintTop_toTopOf="@id/RiwayatHeader"
+        app:layout_constraintBottom_toBottomOf="@id/RiwayatHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/white"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRiwayatBelanja"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/horizontalLineRiwayatHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/riwayat_kosong"
+        android:layout_width="364dp"
+        android:layout_height="403dp"
+        android:src="@drawable/riwayat_kosong"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

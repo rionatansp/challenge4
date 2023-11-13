@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="5dp"
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardMenuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@android:color/white"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="5dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingBottom="10dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/imgPreview"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ayam_oven"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/content_description_media"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/rounded_background_image"
+                android:clipToOutline="true"
+                />
+
+
+            <TextView
+                android:id="@+id/namaMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Menu"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="@id/imgPreview"
+                app:layout_constraintStart_toEndOf="@id/imgPreview"
+                android:layout_marginStart="20dp"
+                />
+
+            <TextView
+                android:id="@+id/hargaMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/namaMenu"
+                app:layout_constraintStart_toStartOf="@id/namaMenu"
+                android:text="Rp. 20.000"
+                />
+
+            <TextView
+                android:id="@+id/deskripsiMenu"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Ini adalah deskripsi dari ayam panggang.Perpaduan antara"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/imgPreview"
+                app:layout_constraintStart_toEndOf="@id/imgPreview" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!--
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMenuItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="1dp"
+            app:cardCornerRadius="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:paddingBottom="10dp"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imgPreview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ayam_oven"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/content_description_media"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/namaMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Menu"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="@id/cardImg"
+                    app:layout_constraintStart_toEndOf="@id/cardImg"
+                    android:layout_marginStart="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/hargaMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/namaMenu"
+                    app:layout_constraintStart_toStartOf="@id/namaMenu"
+                    android:text="Rp. 20.000"
+                    />
+
+                <TextView
+                    android:id="@+id/deskripsiMenu"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@id/cardImg"
+                    app:layout_constraintStart_toEndOf="@id/cardImg"
+                    android:layout_marginStart="20dp"
+                    android:text="Ini adalah deskripsi dari ayam panggang.Perpaduan antara"
+                    android:layout_marginTop="7dp"
+                    android:textSize="12sp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    -->
+</androidx.constraintlayout.widget.ConstraintLayout>

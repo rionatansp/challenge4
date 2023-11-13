@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.CartFragment"
+    android:fillViewport="true">
+
+
+        <TextView
+            android:id="@+id/keranjangHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keranjang"
+            style="@style/text_header"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            />
+
+        <View
+            android:id="@+id/separatorLineKeranjang"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@id/keranjangHeader"
+            layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/separatorLineKeranjang"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintBottom_toTopOf="@id/btnPesan"
+            android:layout_marginBottom="10dp"
+            />
+
+        <Button
+            android:id="@+id/btnPesan"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30dp"
+            android:text="Pesan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/colorAccent"/>
+
+        <TextView
+            android:id="@+id/tvTotalHargaTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Harga"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnPesan"
+            android:layout_marginStart="20dp"
+            />
+
+        <TextView
+            android:id="@+id/tvTotalHarga"
+            style="@style/text_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 100.000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/tvTotalHargaTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvTotalHargaTitle"
+            app:layout_constraintBottom_toBottomOf="@id/btnPesan"
+            />
+
+        <ImageView
+            android:id="@+id/cart_kosong"
+            android:layout_width="364dp"
+            android:layout_height="403dp"
+            android:src="@drawable/cart_kosong"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
