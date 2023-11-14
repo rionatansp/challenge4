@@ -160,8 +160,10 @@ class HomeFragment : Fragment() {
 
         if (isGrid) {
             recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
+            binding.btnChangeLayout.setImageResource(R.drawable.icon_list_layout)
         } else {
             recyclerView.layoutManager = LinearLayoutManager(requireContext())
+            binding.btnChangeLayout.setImageResource(R.drawable.icon_grid_layout)
         }
 
         adapter.setOnItemClickListener { menuItem ->
